@@ -1,5 +1,11 @@
+
+:root {
+    --button-width: 50px;
+    --button-height: 40px;
+}
+
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;  
 }
 
 html {
@@ -22,8 +28,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 500px;
-    height: 700px;
+    width: 400px;
+    height: 600px;
     background-color: rgb(235, 168, 168);
 }
 
@@ -38,6 +44,36 @@ body {
     font-size: 30px;
 }
 
+button {
+    width: var(--button-width);
+    height: var(--button-height);
+}
+
 .clear-button {
     display: flex;
+    width: 80%;
+    height: 150px;
+    justify-content: right;
+    align-items: center;
+}
+
+.bottom-buttons {
+    display: flex;
+    gap: 40px;
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: repeat(3, var(--button-width));
+    gap: 20px;
+}
+
+.operators {
+    display: grid;
+    grid-template-columns: repeat(2, var(--button-width));
+    gap: 20px;
+}
+
+#equals {
+    width: 120px;
 }
