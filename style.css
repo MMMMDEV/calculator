@@ -8,8 +8,36 @@ html {
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     margin: 0;
     background-color: lightslategray;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    background-color: rgb(235, 168, 168);
+}
+
+.display {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    background-color: antiquewhite;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.clear-button {
+    display: flex;
 }
