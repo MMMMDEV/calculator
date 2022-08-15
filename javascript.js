@@ -12,6 +12,9 @@ function operate (operator, num1, num2) {
         case "devide":
             return num1 / num2;
             break;
+        case "exponent":
+            return Math.pow(num1, num2);
+            break;
     }
 }
 
@@ -19,5 +22,6 @@ let add = "add";
 let subtract = "subtract";
 let multiply = "multiply";
 let devide = "devide";
+let exponent = "exponent";
 
-console.log(operate(devide, 2, 3));
+console.log(operate(exponent, 3, 3));
