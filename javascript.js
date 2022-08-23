@@ -214,27 +214,43 @@ window.addEventListener("keydown", e => {
     }
 })
 
+
+
 //allowing operating buttons to work and complete operations
 const devision = document.querySelector("#devision-Btn");
-const backSpace = document.querySelector("#backSpace-Btn");
 const times = document.querySelector("#times-Btn");
 const caret = document.querySelector("#caret-Btn");
 const minus = document.querySelector("#minus-Btn");
 const plus = document.querySelector("#plus-Btn");
+const backSpace = document.querySelector("#backSpace-Btn");
 const equal = document.querySelector("#equals-Btn");
 const clear = document.querySelector("#clear-Btn");
+
+
+const disabledBtn = () => {
+    equal.disabled = true;
+    setTimeout(equal.disabled = false, 1000);
+}
 
 devision.addEventListener("click", e => {
     displayText = [];
     displayText.join("");
     currentOperator = "devide";
+    
 });
 
 equal.addEventListener("click", e => {
-    nextVal = displayText;
-    operate(currentOperator, previousVal.join(""), nextVal.join(""));
-    displayText = answer;
-    display.textContent = displayText.join("");
+
+    if (currentOperator.length >= 1) {
+        nextVal = displayText;
+        operate(currentOperator, previousVal.join(""), nextVal.join(""));
+        displayText = answer;
+        previousVal = answer;
+        display.textContent = displayText.join("");
+        answer = [];
+        currentOperator = "";
+    } 
+
 });
 
 clear.addEventListener("click", e => {
