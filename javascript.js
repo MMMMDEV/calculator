@@ -1,5 +1,6 @@
 //function to do operations
 let answer = [];
+let displayLenght = 15;
 
 function operate (operator, num1, num2) {
     switch (operator) {
@@ -42,126 +43,172 @@ let nextVal ;
 let currentOperator = "";
 
 btn0.addEventListener("click", e => {
-    displayText.push("0");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("0");
+        display.textContent = displayText.join(""); 
+    };
 });
 
 btn00.addEventListener("click", e => {
-    displayText.push("00");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("00");
+        display.textContent = displayText.join("");
+    };
 })
 
 btnPeriod.addEventListener("click", e => {
-    if (!displayText.toString().includes(".")) {
-        displayText.push(".");
-        display.textContent = displayText.join("");  
-    } else {
-        return;
-    }; 
+    if (displayText.join("").length <= displayLenght) {
+        if (!displayText.toString().includes(".")) {
+            displayText.push(".");
+            display.textContent = displayText.join("");  
+        } else {
+            return;
+        };
+    };
 });
 
 btn1.addEventListener("click", e => {
-    displayText.push("1");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("1");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn2.addEventListener("click", e => {
-    displayText.push("2");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("2");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn3.addEventListener("click", e => {
-    displayText.push("3");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("3");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn4.addEventListener("click", e => {
-    displayText.push("4");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("4"); 
+        display.textContent = displayText.join("");
+    };
 });
 
 btn5.addEventListener("click", e => {
-    displayText.push("5");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("5");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn6.addEventListener("click", e => {
-    displayText.push("6");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("6");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn7.addEventListener("click", e => {
-    displayText.push("7");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("7");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn8.addEventListener("click", e => {
-    displayText.push("8");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("8");
+        display.textContent = displayText.join("");
+    };
 });
 
 btn9.addEventListener("click", e => {
-    displayText.push("9");
-    display.textContent = displayText.join("");
+    if (displayText.join("").length <= displayLenght) {
+        displayText.push("9");
+        display.textContent = displayText.join("");
+    };
 });
 
 window.addEventListener("keydown", e => {
     switch (e.key) {
         case "0":
-            displayText.push("0");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("0");
+                display.textContent = displayText.join("");
+            };
             break;
 
         case ".":
-            if (!displayText.toString().includes(".")) {
-                displayText.push(".");
-                display.textContent = displayText.join("");  
-              }
+            if (displayText.join("").length <= displayLenght) {
+                if (!displayText.toString().includes(".")) {
+                    displayText.push(".");
+                    display.textContent = displayText.join("");  
+                }
+            };
             break;
 
         case "1":
-            displayText.push("1");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("1");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "2":
-            displayText.push("2");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("2");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "3":
-            displayText.push("3");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("3");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "4":
-            displayText.push("4");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("4");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "5":
-            displayText.push("5");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("5");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "6":
-            displayText.push("6");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("6");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "7":
-            displayText.push("7");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("7");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "8":
-            displayText.push("8");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("8");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
         case "9":
-            displayText.push("9");
-            display.textContent = displayText.join("");
+            if (displayText.join("").length <= displayLenght) {
+                displayText.push("9");
+                display.textContent = displayText.join(""); 
+            };
             break;
 
     }
@@ -188,7 +235,6 @@ equal.addEventListener("click", e => {
     operate(currentOperator, previousVal.join(""), nextVal.join(""));
     displayText = answer;
     display.textContent = displayText.join("");
-    console.log(displayText.toString().includes("."));
 });
 
 clear.addEventListener("click", e => {
