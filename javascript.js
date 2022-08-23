@@ -1,29 +1,24 @@
 //function to do operations
+let answer = [];
 function operate (operator, num1, num2) {
     switch (operator) {
         case "add":
-            return num1 + num2;
+            answer.push(num1 + num2);
             break;
         case "subtract":
-            return num1 - num2;
+            answer.push(num1 - num2);
             break;
         case "multiply":
-            return num1 * num2;
+            answer.push(num1 * num2);
             break;
         case "devide":
-            return num1 / num2;
+            answer.push(num1 / num2);
             break;
         case "exponent":
-            return Math.pow(num1, num2);
+            answer.push(Math.pow(num1, num2));
             break;
     }
 }
-
-let add = "add";
-let subtract = "subtract";
-let multiply = "multiply";
-let devide = "devide";
-let exponent = "exponent";
 
 //populating display with numbers
 const display = document.querySelector(".display");
@@ -41,6 +36,9 @@ const btn8 = document.querySelector("#btn-8");
 const btn9 = document.querySelector("#btn-9");
 
 let displayText = [];
+let previousVal = displayText;
+let nextVal ;
+let currentOperator = "";
 
 btn0.addEventListener("click", e => {
     displayText.push("0");
@@ -112,7 +110,7 @@ window.addEventListener("keydown", e => {
             displayText.push("0");
             display.textContent = displayText.join("");
             break;
-            
+
         case ".":
             if (!displayText.includes(".")) {
                 displayText.push(".");
@@ -169,3 +167,36 @@ window.addEventListener("keydown", e => {
 
     }
 })
+
+//allowing operating buttons to work and complete operations
+const devision = document.querySelector("#devision-Btn");
+const backSpace = document.querySelector("#backSpace-Btn");
+const times = document.querySelector("#times-Btn");
+const caret = document.querySelector("#caret-Btn");
+const minus = document.querySelector("#minus-Btn");
+const plus = document.querySelector("#plus-Btn");
+const equal = document.querySelector("#equals-Btn");
+const clear = document.querySelector("#clear-Btn");
+
+devision.addEventListener("click", e => {
+    displayText = [];
+    displayText.join("");
+    currentOperator = "devide";
+});
+
+equal.addEventListener("click", e => {
+    nextVal = displayText;
+    operate(currentOperator, previousVal.join(""), nextVal.join(""));
+    displayText = answer;
+    display.textContent = displayText.join("");
+    console.log(displayText);
+});
+
+clear.addEventListener("click", e => {
+    displayText = [];
+    answer = [];
+    nextVal = [];
+    previousVal = displayText;
+    display.textContent = displayText;
+})
+
