@@ -1,5 +1,6 @@
 //function to do operations
 let answer = [];
+
 function operate (operator, num1, num2) {
     switch (operator) {
         case "add":
@@ -51,9 +52,9 @@ btn00.addEventListener("click", e => {
 })
 
 btnPeriod.addEventListener("click", e => {
-    if (!displayText.includes(".")) {
-      displayText.push(".");
-    display.textContent = displayText.join("");  
+    if (!displayText.toString().includes(".")) {
+        displayText.push(".");
+        display.textContent = displayText.join("");  
     } else {
         return;
     }; 
@@ -112,12 +113,10 @@ window.addEventListener("keydown", e => {
             break;
 
         case ".":
-            if (!displayText.includes(".")) {
+            if (!displayText.toString().includes(".")) {
                 displayText.push(".");
-              display.textContent = displayText.join("");  
-              } else {
-                  return;
-              };
+                display.textContent = displayText.join("");  
+              }
             break;
 
         case "1":
@@ -189,7 +188,7 @@ equal.addEventListener("click", e => {
     operate(currentOperator, previousVal.join(""), nextVal.join(""));
     displayText = answer;
     display.textContent = displayText.join("");
-    console.log(displayText);
+    console.log(displayText.toString().includes("."));
 });
 
 clear.addEventListener("click", e => {
