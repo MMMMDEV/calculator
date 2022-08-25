@@ -5,7 +5,7 @@ let displayLenght = 15;
 function operate (operator, num1, num2) {
     switch (operator) {
         case "add":
-            answer.push(num1 + num2);
+            answer.push(parseFloat(num1) + parseFloat(num2));
             break;
         case "subtract":
             answer.push(num1 - num2);
@@ -232,6 +232,30 @@ devision.addEventListener("click", e => {
     currentOperator = "devide";
 });
 
+times.addEventListener("click", e => {
+    displayText = [];
+    displayText.join("");
+    currentOperator = "multiply";
+});
+
+caret.addEventListener("click", e => {
+    displayText = [];
+    displayText.join("");
+    currentOperator = "exponent";
+});
+
+minus.addEventListener("click", e => {
+    displayText = [];
+    displayText.join("");
+    currentOperator = "subtract";
+});
+
+plus.addEventListener("click", e => {
+    displayText = [];
+    displayText.join("");
+    currentOperator = "add";
+});
+
 backSpace.addEventListener("click", e => {
     displayText = (Array.from(displayText.toString())).toString().replaceAll(",", "");
     displayText = [displayText.slice(0 , displayText.length -1)];
@@ -241,7 +265,6 @@ backSpace.addEventListener("click", e => {
 });
 
 equal.addEventListener("click", e => {
-
     if (currentOperator.length >= 1) {
         nextVal = displayText;
         operate(currentOperator, previousVal.join(""), nextVal.join(""));
