@@ -226,16 +226,17 @@ const backSpace = document.querySelector("#backSpace-Btn");
 const equal = document.querySelector("#equals-Btn");
 const clear = document.querySelector("#clear-Btn");
 
-
-const disabledBtn = () => {
-    equal.disabled = true;
-    setTimeout(equal.disabled = false, 1000);
-}
-
 devision.addEventListener("click", e => {
     displayText = [];
     displayText.join("");
     currentOperator = "devide";
+});
+
+backSpace.addEventListener("click", e => {
+    displayText = Array.from(displayText.toString());
+    displayText = displayText.slice(0 , displayText.length -1);
+    previousVal = displayText;
+    display.textContent = displayText.join("");
     
 });
 
@@ -249,8 +250,9 @@ equal.addEventListener("click", e => {
         display.textContent = displayText.join("");
         answer = [];
         currentOperator = "";
+        
     } 
-
+     
 });
 
 clear.addEventListener("click", e => {
@@ -259,5 +261,5 @@ clear.addEventListener("click", e => {
     nextVal = [];
     previousVal = displayText;
     display.textContent = displayText;
-})
+});
 
