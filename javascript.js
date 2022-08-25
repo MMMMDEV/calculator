@@ -233,8 +233,8 @@ devision.addEventListener("click", e => {
 });
 
 backSpace.addEventListener("click", e => {
-    displayText = Array.from(displayText.toString());
-    displayText = displayText.slice(0 , displayText.length -1);
+    displayText = (Array.from(displayText.toString())).toString().replaceAll(",", "");
+    displayText = [displayText.slice(0 , displayText.length -1)];
     previousVal = displayText;
     display.textContent = displayText.join("");
     
