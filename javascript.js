@@ -1,6 +1,6 @@
 //function to do operations
 let answer = [];
-let displayLenght = 15;
+let displayLenght = 21;
 
 function operate (operator, num1, num2) {
     switch (operator) {
@@ -271,6 +271,7 @@ equal.addEventListener("click", e => {
         displayText = answer;
         previousVal = answer;
         display.textContent = displayText.join("");
+        console.log(displayText)
         answer = [];
         currentOperator = "";
         
