@@ -14,7 +14,11 @@ function operate (operator, num1, num2) {
             answer.push(num1 * num2);
             break;
         case "devide":
-            answer.push(num1 / num2);
+            if (num2 == 0) {
+                answer.push("They figured out our secret!");
+            } else {
+               answer.push(num1 / num2); 
+            };
             break;
         case "exponent":
             answer.push(Math.pow(num1, num2));
