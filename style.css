@@ -2,8 +2,9 @@
 :root {
     --button-width: 50px;
     --button-height: 45px;
-
+    --footer-height: 10vh;
     /* CSS HEX */
+
     --independence: #3a405aff;
     --champagne-pink: #f9dec9ff;
     --cadet-blue: #7cb4b8ff;
@@ -20,12 +21,20 @@ html {
 
 body {
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     margin: 0;
     background-color: lightslategray;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - var(--footer-height));
 }
 
 .calculator-container {
@@ -91,4 +100,45 @@ button {
 
 #equals-Btn {
     width: 100px;
+}
+
+footer {
+    background-color: whitesmoke;
+    position: relative;
+    width: 100%;
+    height: var(--footer-height);
+    display: flex;
+    gap: 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.footer-content-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.github-icon {
+    width: 50px;
+}
+
+.left-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+.right-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
+    font-family: 'Kantumruy Pro', sans-serif;
 }
