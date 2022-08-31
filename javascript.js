@@ -214,7 +214,22 @@ window.addEventListener("keydown", e => {
                 display.textContent = displayText.join(""); 
             };
             break;
+        
+        case "Enter":
+            if (currentOperator.length >= 1) {
+                nextVal = displayText;
+                operate(currentOperator, previousVal.join(""), nextVal.join(""));
+                displayText = answer;
+                previousVal = answer;
+                display.textContent = displayText.join("");
+                answer = [];
+                currentOperator = "";
+            } 
+            break;
 
+        case "Backspace":
+            
+            break;
     }
 })
 
@@ -261,7 +276,9 @@ plus.addEventListener("click", e => {
 });
 
 backSpace.addEventListener("click", e => {
+    console.log(displayText);
     displayText = (Array.from(displayText.toString())).toString().replaceAll(",", "");
+    console.log(displayText);
     displayText = [displayText.slice(0 , displayText.length -1)];
     previousVal = displayText;
     display.textContent = displayText.join("");
@@ -278,7 +295,7 @@ equal.addEventListener("click", e => {
         console.log(displayText)
         answer = [];
         currentOperator = "";
-        
+
     } 
      
 });

@@ -323,7 +323,7 @@ a {
     }
 }
 
-/* css for tablet portrait */
+/* css for desktop portrait */
 
 @media only screen and (min-height: 1400px) {
     :root {
@@ -369,5 +369,25 @@ a {
 
     .github-icon {
         width: 50px;
+    }
+}
+
+/* css for desktop landscape */
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        --footer-height: 5vh;
+    }
+
+    .right-footer {
+        font-size: 20px;
+    }
+
+    .github-icon {
+        width: 50px;
+    }
+
+    .left-footer {
+        width: 10%;
     }
 }
