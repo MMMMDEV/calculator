@@ -48,6 +48,7 @@ body {
     width: 300px;
     height: 440px;
     background-color: var(--independence);
+    transition: 0.4s;
 }
 
 .display {
@@ -61,6 +62,7 @@ body {
     font-size: 19px;
     overflow: hidden;
     font-family: 'Kantumruy Pro', sans-serif;
+    transition: 0.6s;
 }
 
 button {
@@ -210,8 +212,60 @@ a {
         width: 139px;
     }
 
-
     .github-icon {
         width: 40px;
+    }
+
+    .left-footer {
+        width: 10%;
+    }
+}
+
+/* css for tablet portrait */
+
+@media only screen and (min-height: 1080px) {
+    :root {
+        --button-width: 55px;
+        --button-height: 50px;
+        --footer-height: 7vh;
+    }
+
+    .display {
+        font-size: 22px;
+    }
+
+    .calculator-container {
+        width: 380px;
+        height: 580px;
+    }
+
+    .clear-button {
+        height: 160px;
+    }
+
+    #clear-Btn {
+        width: 114px;
+    }
+
+    .digits {
+        grid-template-columns: repeat(3, var(--button-width));
+        gap: 4px;
+    }
+
+    .operators {
+        grid-template-columns: repeat(2, var(--button-width));
+        gap: 4px;
+    }
+
+    #equals-Btn {
+        width: 114px;
+    }
+
+    .right-footer {
+        font-size: 18px;
+    }
+
+    .github-icon {
+        width: 50px;
     }
 }
