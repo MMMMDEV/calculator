@@ -276,7 +276,7 @@ a {
     :root {
         --button-width: 55px;
         --button-height: 50px;
-        --footer-height: 9vh;
+        --footer-height: 5vh;
     }
 
     .display {
@@ -320,5 +320,54 @@ a {
 
     .left-footer {
         width: 10%;
+    }
+}
+
+/* css for tablet portrait */
+
+@media only screen and (min-height: 1400px) {
+    :root {
+        --button-width: 55px;
+        --button-height: 50px;
+        --footer-height: 5vh;
+    }
+
+    .display {
+        font-size: 22px;
+    }
+
+    .calculator-container {
+        width: 380px;
+        height: 580px;
+    }
+
+    .clear-button {
+        height: 160px;
+    }
+
+    #clear-Btn {
+        width: 114px;
+    }
+
+    .digits {
+        grid-template-columns: repeat(3, var(--button-width));
+        gap: 4px;
+    }
+
+    .operators {
+        grid-template-columns: repeat(2, var(--button-width));
+        gap: 4px;
+    }
+
+    #equals-Btn {
+        width: 114px;
+    }
+
+    .right-footer {
+        font-size: 18px;
+    }
+
+    .github-icon {
+        width: 50px;
     }
 }
