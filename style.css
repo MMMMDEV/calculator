@@ -15,6 +15,8 @@
     box-sizing: border-box;  
 }
 
+/* css for phones in portrait */
+
 html {
     width: 100%;
     min-height: 100%;
@@ -161,6 +163,55 @@ footer {
 }
 
 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     text-decoration: none;
+}
+
+/* css for phones in landscape */
+
+@media only screen and (min-width: 667px) {
+    :root {
+        --button-width: 45px;
+        --button-height: 40px;
+        --footer-height: 13vh;
+    }
+
+    .display {
+        font-size: 22px;
+    }
+
+    .calculator-container {
+        width: 440px;
+        height: 300px;
+    }
+
+    .clear-button {
+        height: 70px;
+    }
+
+    #clear-Btn {
+        width: 92px;
+    }
+
+    .digits {
+        grid-template-columns: repeat(4, var(--button-width));
+        gap: 3px;
+    }
+
+    .operators {
+        grid-template-columns: repeat(3, var(--button-width));
+        gap: 3px;
+    }
+
+    #equals-Btn {
+        width: 139px;
+    }
+
+
+    .github-icon {
+        width: 40px;
+    }
 }
