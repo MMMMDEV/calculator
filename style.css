@@ -172,6 +172,105 @@ a {
     text-decoration: none;
 }
 
+/* css for small phones portrait */
+
+@media only screen and (min-width: 320px) {
+    :root {
+        --button-width: 40px;
+        --button-height: 35px;
+        --footer-height: 8vh;
+    }
+
+    .display {
+        font-size: 18px;
+    }
+
+    .calculator-container {
+        width: 280px;
+        height: 380px;
+    }
+
+    .clear-button {
+        height: 100px;
+    }
+
+    #clear-Btn {
+        width: 83px;
+    }
+
+    .digits {
+        grid-template-columns: repeat(3, var(--button-width));
+        gap: 3px;
+    }
+
+    .operators {
+        grid-template-columns: repeat(2, var(--button-width));
+        gap: 3px;
+    }
+
+    #equals-Btn {
+        width: 83px;
+    }
+
+    .right-footer {
+        font-size: 15px;
+    }
+
+    .github-icon {
+        width: 33px;
+    }
+}
+
+/* css for small phone landscape */
+
+@media only screen and (min-width: 480px) {
+    :root {
+        --button-width: 35px;
+        --button-height: 30px;
+        --footer-height: 10vh;
+    }
+
+    .display {
+        font-size: 18px;
+        height: 50px;
+    }
+
+    .calculator-container {
+        width: 350px;
+        height: 250px;
+    }
+
+    .clear-button {
+        height: 70px;
+    }
+
+    #clear-Btn {
+        width: 74px;
+    }
+
+    .digits {
+        grid-template-columns: repeat(4, var(--button-width));
+        gap: 3px;
+    }
+
+    .operators {
+        grid-template-columns: repeat(3, var(--button-width));
+        gap: 3px;
+    }
+
+    #equals-Btn {
+        width: 111px;
+    }
+
+    .github-icon {
+        width: 30px;
+    }
+
+    .left-footer {
+        width: 10%;
+    }
+}
+
 /* css for phones in landscape */
 
 @media only screen and (min-width: 667px) {
