@@ -275,8 +275,8 @@ a {
 
 @media only screen and (min-width: 667px) {
     :root {
-        --button-width: 45px;
-        --button-height: 40px;
+        --button-width: 40px;
+        --button-height: 35px;
         --footer-height: 11vh;
     }
 
@@ -285,12 +285,12 @@ a {
     }
 
     .calculator-container {
-        width: 440px;
-        height: 300px;
+        width: 420px;
+        height: 260px;
     }
 
     .clear-button {
-        height: 70px;
+        height: 60px;
     }
 
     #clear-Btn {
@@ -312,7 +312,7 @@ a {
     }
 
     .github-icon {
-        width: 40px;
+        width: 30px;
     }
 
     .left-footer {
