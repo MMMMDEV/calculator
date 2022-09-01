@@ -135,6 +135,10 @@ btn9.addEventListener("click", e => {
 });
 
 window.addEventListener("keydown", e => {
+    console.log(e.key);
+});
+
+window.addEventListener("keydown", e => {
     switch (e.key) {
         case "0":
             if (displayText.join("").length <= displayLenght) {
@@ -214,21 +218,43 @@ window.addEventListener("keydown", e => {
                 display.textContent = displayText.join(""); 
             };
             break;
-        
-        case "Enter":
-            if (currentOperator.length >= 1) {
-                nextVal = displayText;
-                operate(currentOperator, previousVal.join(""), nextVal.join(""));
-                displayText = answer;
-                previousVal = answer;
-                display.textContent = displayText.join("");
-                answer = [];
-                currentOperator = "";
-            } 
+
+        case "/":
+            displayText = [];
+            displayText.join("");
+            currentOperator = "devide";
+            break;
+
+        case "*":
+            displayText = [];
+            displayText.join("");
+            currentOperator = "multiply";
+            break;
+
+        case "^":
+            displayText = [];
+            displayText.join("");
+            currentOperator = "exponent";
+            break;
+
+        case "-":
+            displayText = [];
+            displayText.join("");
+            currentOperator = "subtract";
+            break;
+
+        case "+":
+            displayText = [];
+            displayText.join("");
+            currentOperator = "add";
             break;
 
         case "Backspace":
-            
+            del();
+            break;
+
+        case "Enter":
+            equalFunction();
             break;
     }
 })
@@ -275,29 +301,31 @@ plus.addEventListener("click", e => {
     currentOperator = "add";
 });
 
-backSpace.addEventListener("click", e => {
-    console.log(displayText);
+function del() {
     displayText = (Array.from(displayText.toString())).toString().replaceAll(",", "");
-    console.log(displayText);
     displayText = [displayText.slice(0 , displayText.length -1)];
     previousVal = displayText;
     display.textContent = displayText.join("");
-    
+};
+
+backSpace.addEventListener("click", e => {
+    del(); 
 });
 
-equal.addEventListener("click", e => {
+function equalFunction() {
     if (currentOperator.length >= 1) {
         nextVal = displayText;
         operate(currentOperator, previousVal.join(""), nextVal.join(""));
         displayText = answer;
         previousVal = answer;
         display.textContent = displayText.join("");
-        console.log(displayText)
         answer = [];
         currentOperator = "";
+    }
+};
 
-    } 
-     
+equal.addEventListener("click", e => {
+     equalFunction();
 });
 
 clear.addEventListener("click", e => {
