@@ -178,7 +178,7 @@ a {
     :root {
         --button-width: 45px;
         --button-height: 40px;
-        --footer-height: 13vh;
+        --footer-height: 11vh;
     }
 
     .display {
@@ -272,11 +272,11 @@ a {
 
 /* css for tablet landscape */
 
-@media only screen and (min-width: 667px) {
+@media only screen and (min-width: 1080px) {
     :root {
         --button-width: 55px;
         --button-height: 50px;
-        --footer-height: 5vh;
+        --footer-height: 8vh;
     }
 
     .display {
